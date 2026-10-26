@@ -1,0 +1,16 @@
+name: "DKIM Checker by PromoPilot"
+description: "Check a domain's DKIM keys: key length, revoked or testing keys and syntax."
+author: "Alexandr Krikun"
+branding:
+  icon: "key"
+  color: "purple"
+inputs:
+  args:
+    description: "Arguments passed to the dkim-checker CLI, e.g. \"example.com google\""
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Run dkim-checker
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/bin/cli.js" ${{ inputs.args }}

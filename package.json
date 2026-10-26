@@ -1,0 +1,55 @@
+{
+  "name": "@promopilot/dkim-checker",
+  "version": "1.0.0",
+  "description": "Check DKIM public keys from the command line: finds selectors of common mail providers, decodes RSA/Ed25519 keys, reports key length, revoked and testing keys and syntax errors. Zero-dependency Node.js CLI, library and GitHub Action. Free online version by PromoPilot.",
+  "keywords": [
+    "dkim",
+    "dkim-checker",
+    "dkim-record",
+    "dkim-selector",
+    "email-authentication",
+    "email-deliverability",
+    "email-security",
+    "dmarc",
+    "spf",
+    "dns",
+    "cli",
+    "nodejs",
+    "github-action",
+    "promopilot"
+  ],
+  "homepage": "https://promopilot.link/en/tools/dkim-checker.php?utm_source=github&utm_medium=repo&utm_campaign=tools&utm_content=dkim-checker",
+  "bugs": {
+    "url": "https://github.com/ksanyok/dkim-checker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksanyok/dkim-checker.git"
+  },
+  "license": "MIT",
+  "author": "Alexandr Krikun (https://github.com/ksanyok)",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "dkim-checker": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
